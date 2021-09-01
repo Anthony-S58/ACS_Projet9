@@ -10,7 +10,7 @@ function getValue(){
     // let resultat= document.getElementById('resultat');
 
     // alert(libelle);
-var newResult1 = document.createElement('div');
+var newResult1 = document.createElement('p');
 newResult1.id = 'titre';
 
 var newResult2 = document.createElement('p');
@@ -40,18 +40,15 @@ if (categories=="Dépenses") {
     newResult2.style.backgroundColor="green";
 }else{}
 }
-
-
-
 var totalR = document.getElementById('totalR');
 var totalD = document.getElementById('totalD');
 
-foreach (getvalue()){
-    if(categories=="Dépenses"){
+// foreach (getvalue()){
+//     if(categories=="Dépenses"){
 
-    }else if(categories=="Revenus"){
+//     }else if(categories=="Revenus"){
 
-    }else {
+//     }else {
         
-    }
-};
+//     }
+// };
