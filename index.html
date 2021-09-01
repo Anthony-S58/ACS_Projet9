@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+<!-- titre -->
+    <h1>Simulateur de dépenses</h1><br>
+        <div id="budget"></div> <div>€</div>
+    
+<!-- formulaire -->
+
+<form>
+    <input type="text" id="libelle" placeholder="libellé" required>
+    <input type="number" id="montant" placeholder="montant" required>
+    <select name="categories" id="categories" required>
+        <option value=""> -- Catégories -- </option>
+        <option value="Dépenses">Dépenses</option>
+        <option value="Revenus">Revenus</option>
+    </select>
+   <button type="button" onclick="getValue();">Récupérer la valeur</button>
+    
+</form>
+
+
+<!-- tableau -->
+
+<div id="resultat"></div>
+<div id="tableau">
+    <div id="depenses">
+        <h2 class=titre_depenses>TOTAL Dépenses :</h2><div id="totalD"></div>
+        
+
+        </div>
+
+    </div>
+
+    <div id="revenus">
+        <h2 class=titre_revenus>TOTAL Revenus :</h2><div id="totalR"></div>
+
+
+    </div>
+</div>
+
+    <script src="main.js"></script>
+</body>
+</html>
