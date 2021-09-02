@@ -3,18 +3,28 @@
     left: 0;
     box-sizing: border-box;
 }
+html{
+    height: 100%;
+    overflow: hidden;
+    background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%);
+}
 
 body{
+    
     display: flex;
     justify-content: center;
     text-align: center;
     align-items: center;
     flex-direction: column;
+    color: white;
 }
 
 h1{
     padding: 20px;
     font-size: 50px;
+    font-weight: 300;
+    font-family: Lato;
+    letter-spacing: 10px;
 }
 
 /* formulaire */
@@ -72,10 +82,14 @@ text-align: center;
 .titre_depenses{
     width: 100%;
     height:30px;
+    font-weight: 300;
+    font-family: Lato;
 }
 .titre_revenus{
     width: 100%;
     height:30px;
+    font-weight: 300;
+    font-family: Lato;
 }
 
 #totalR{
@@ -112,3 +126,4 @@ hr{
     content: " €";
 }
 
+/* test */
