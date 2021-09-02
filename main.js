@@ -4,48 +4,73 @@ function getValue(){
     let libelle = document.getElementById('libelle').value;
     let montant = document.getElementById('montant').value;
     let categories = document.getElementById('categories').value;
+    let revenus = document.getElementById('revenus');
+    let totalRevenus = document.getElementById('totalR');
+    let depenses = document.getElementById('depenses');   
+    let totalDepenses = document.getElementById('totalD');
+    let resultat = document.getElementById('resultat');
+    
 
-let newResult1 = document.createElement('p');
-newResult1.id = 'titre';
+    let newResult1 = document.createElement('p');
+    newResult1.id = 'titre';
 
-let newResult2 = document.createElement('p');
-newResult2.id = 'prix';
+    let newResult2 = document.createElement('p');
+    newResult2.id = 'prix';
 
-let newResult3 = document.createElement('p');
-newResult3.id = 'valeur';
-
-let texte1 = document.createTextNode(libelle);
-let texte2 = document.createTextNode(montant);
-let texte3 = document.createTextNode(categories);
-
-
-newResult1.appendChild(texte1);
-newResult2.appendChild(texte2);
-newResult3.appendChild(texte3);
-
-document.body.appendChild(newResult1);
-document.body.appendChild(newResult2);
-document.body.appendChild(newResult3);
-
-if (categories==="Dépenses") {
-    newResult1.style.backgroundColor="red";
-    newResult2.style.backgroundColor="red";
-}else if(categories==="Revenus") {
-    newResult1.style.backgroundColor="green";
-    newResult2.style.backgroundColor="green";
-}else{}
+    let newResult3 = document.createElement('p');
+    newResult3.id = 'valeur';
 
 
-let totalRevenus = document.getElementById('totalR');
-let totalDepenses = document.getElementById('totalD');
+    newResult1.textContent=libelle;
+    newResult2.textContent=montant;
+    newResult3.textContent=categories;
 
-if (categories==="Dépenses"){
-    totalDepenses.innerHTML -= Number(montant);
-    budget.innerHTML -= Number(montant);
+
+    resultat.appendChild(newResult1);
+    resultat.appendChild(newResult2);
+    resultat.appendChild(newResult3);
+
+
+    if (categories==="Dépenses") {
+        // newResult1.style.backgroundColor="red";
+        newResult2.style.color="red";
+        newResult3.style.color="transparent";
+        depenses.appendChild(newResult1);
+        depenses.appendChild(newResult2);
+        depenses.appendChild(newResult3);
+
+    }else if(categories==="Revenus") {
+        // newResult1.style.backgroundColor="green";
+        newResult2.style.color="green";
+        newResult3.style.color="transparent";
+        revenus.appendChild(newResult1);
+        revenus.appendChild(newResult2);
+        revenus.appendChild(newResult3);
+
+    }else{}
+
+    if (categories==="Dépenses"){
+        totalDepenses.innerHTML = Number(totalDepenses.textContent) + Number(montant);
+        budget.innerHTML -= Number(montant);
+    }
+    if (categories==="Revenus") {
+        totalRevenus.textContent = Number(totalRevenus.textContent) + Number(montant);
+        budget.textContent = Number(budget.textContent) + Number(montant);
+    }
+
+    if (budget.textContent <= 150){
+        resultat.innerHTML="<i class='fas fa-exclamation-triangle'></i> Attention vous n'avez plus beaucoup d'argent";
+    } else{
+        resultat.innerHTML="";
+    }
+
+
+    if (budget.textContent > 0){
+        budget.style.color="green";
+    }else if(budget.textContent == 0){
+        budget.style.color="black";
+    }else{
+        budget.style.color="red";
+    }
 }
-if (categories==="Revenus") {
-    totalRevenus.textContent = Number(totalRevenus.textContent) + Number(montant);
-    budget.textContent = Number(budget.textContent) + Number(montant);
-
-}}
 
