@@ -25,6 +25,8 @@ form{
     flex-direction: column;
     text-align: center;
     gap: 5px;
+    margin-top: 20px;
+
 }
 
 input{
@@ -63,7 +65,7 @@ text-align: center;
 #tableau{
     width: 100%;
     height:auto;
-    margin-top: 50px;
+    margin-top: 20px;
     display: flex;
     justify-content: space-around;
 }
@@ -109,3 +111,4 @@ hr{
 #totalD::after{
     content: " €";
 }
+

@@ -1,3 +1,5 @@
+
+// function
 function getValue(){
 
     let budget = document.getElementById('budget');
@@ -58,19 +60,24 @@ function getValue(){
         budget.textContent = Number(budget.textContent) + Number(montant);
     }
 
-    if (budget.textContent <= 150){
+    if (budget.textContent <= 150 && budget.textContent >0){
         resultat.innerHTML="<i class='fas fa-exclamation-triangle'></i> Attention vous n'avez plus beaucoup d'argent";
-    } else{
-        resultat.innerHTML="";
+    }else if(budget.textContent <= 0){
+        resultat.innerHTML="<i class='fas fa-exclamation-triangle'></i> Vous n'avez plus d'argent !!!";
+    }else{
+        resultat.innerHTML=""
     }
 
 
-    if (budget.textContent > 0){
-        budget.style.color="green";
-    }else if(budget.textContent == 0){
-        budget.style.color="black";
-    }else{
+    if (budget.textContent > 150){
+        budget.style.color="green";   
+    }else if(budget.textContent < 0){
         budget.style.color="red";
+    }else{
+        budget.style.color="orange";
     }
 }
+
+// test
+
 
