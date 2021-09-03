@@ -7,9 +7,9 @@ function getValue(){
     let montant = document.getElementById('montant').value;
     let categories = document.getElementById('categories').value;
     let revenus = document.getElementById('revenus');
-    let totalRevenus = document.getElementById('totalR');
+    let totalRevenus = document.getElementById('totalRevenus');
     let depenses = document.getElementById('depenses');   
-    let totalDepenses = document.getElementById('totalD');
+    let totalDepenses = document.getElementById('totalDepenses');
     let resultat = document.getElementById('resultat');
     
 
